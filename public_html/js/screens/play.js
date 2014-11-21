@@ -17,7 +17,7 @@ game.PlayScreen = me.ScreenObject.extend({
 		me.game.world.addChild(this.HUD);
 	},
 
-
+        
 	/**
 	 *  action to perform when leaving this screen (state change)
 	 */
@@ -28,7 +28,7 @@ game.PlayScreen = me.ScreenObject.extend({
         
         resetPlayer: function(x, y) {
              var player = me.pool.pull("mario", x, y, {});
-                 me.game.world.addChild(player, 3);
+                 me.game.world.addChild(player, 6);
                  
         }
 });
