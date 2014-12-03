@@ -1,4 +1,4 @@
-game.resources = [
+ game.resources = [
 
 	/* Graphics. 
 	 * @example
@@ -13,7 +13,11 @@ game.resources = [
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},
 	 */
-		
+		{name: "slime", type:"image", src: "data/img/slime-spritesheet.png"},
+        
+    /* Atlases 
+	 * @example
+	 * {name: "example_tps", type: "tps", src: "data/img/example_tps
 	/* Maps. 
 	 * @example
 	 * {name: "example01", type: "tmx", src: "data/map/example01.tmx"},
