@@ -60,10 +60,19 @@ game.PlayerEntity = me.Entity.extend({
     
     
     collideHandler: function(response){
+        var ydif = this.pos.y - response.b.pos.y;
+        console.log(ydif);
+        
+        if(response.b.type ==='badguy'){
+            if(ydif <= -115){
+                response.b.alive = false;
+            }else{
+
+                me.state.change(me.state.MENU);
+            }
+        }
         
     }
-        
-    
     
     
 });
@@ -88,7 +97,7 @@ game.LevelTrigger = me.Entity.extend({
 });
 
 
-game.badguy = me.Entity.extend({
+game.BadGuy = me.Entity.extend({
     init: function(x, y, settings){
           this._super(me.Entity, 'init', [x, y, {
            image: "slime",
@@ -101,7 +110,7 @@ game.badguy = me.Entity.extend({
            }
        }]);
     
-    this.spriteworld = 60;
+    this.spritewidth = 60;
     var width = settings.width;
     x = this.pos.x;
     this.startX = x;
@@ -116,8 +125,8 @@ game.badguy = me.Entity.extend({
     this.type = "badguy";
     
     
-    //this.renderable.addAnimation("run", [0, 1, 2], 80);
-    //this.renderable.setCurrentAnimation("run");
+//    //this.renderable.addAnimation("run", [0, 1, 2], 80);
+//    //this.renderable.setCurrentAnimation("run");
     
     this.body.setVelocity(4, 6);
     },
