@@ -8,7 +8,8 @@
            {name: "meta-tiles", type:"image", src: "data/img/meta-tiles.png"},
 	   {name: "mario", type:"image", src: "data/img/player1.png"},
            {name: "title-screen", type:"image", src: "data/img/title-screen.png"},
-        
+           {name: "mushroom", type:"image", src: "data/img/mushroom.png"},
+           
     /* Atlases 
 	 * @example
 	 * {name: "example_tps", type: "tps", src: "data/img/example_tps.json"},

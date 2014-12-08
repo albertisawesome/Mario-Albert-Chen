@@ -24,4 +24,7 @@
  <objectgroup color="#55ffff" name="EnemyEntities">
   <object name="BadGuy" x="700" y="426" width="142" height="59"/>
  </objectgroup>
+ <objectgroup name="CollectableEntities">
+  <object name="Mushroom" x="489" y="415" width="73" height="74"/>
+ </objectgroup>
 </map>
